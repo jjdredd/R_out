@@ -23,6 +23,7 @@ int main () {
 
 	float x,y,z,tout,anl;
 	int nphoto = 0, neven=0;
+	TFile *f = new TFile("basic.root","RECREATE");
 	TH1F h1 = TH1F("h1","x distribution",100,-1,1);
 	TH1F h2 = TH1F("h2","Nphot distrb  ",100,0,2000);
 	TH2F h3 = TH2F("h3","x VS y        ",100,-0.8,0.8,100,-2.2,-0.8);
@@ -58,5 +59,7 @@ int main () {
 	std::cout << "\tfound " << nphoto << " points" << std::endl;
 	std::cout << "\tfound " << neven << " Neven" << std::endl;
 
+	f->Write();
+	
 	return 0;
 }
