@@ -7,4 +7,4 @@ CXXFLAGS = $(ROOT_INC)
 LDFLAGS = -lm $(ROOT_LIB)
 
 rout.elf: rout.cpp
-	g++ $(CXXFLAGS) $(LDFLAGS) -o root.elf rout.cpp
+	g++ $(CXXFLAGS) $(LDFLAGS) -o rout.elf rout.cpp

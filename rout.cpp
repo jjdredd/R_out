@@ -1,4 +1,5 @@
-#include "Riostream.h"
+#include <fstream>
+#include <iostream>
 #include <vector>
 #include <string>
 #include <TString.h>
@@ -18,7 +19,7 @@ struct vec  {
 
 int main () {
 
-	ifstream in("basic.dat");
+	std::ifstream in("basic.dat");
 
 	float x,y,z,tout,anl;
 	int nphoto = 0, neven=0;
